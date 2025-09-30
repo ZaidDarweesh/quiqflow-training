@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JS Fundamentals – Simple List</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main class="container">
+    <h1>Simple List</h1>
+
+    <div class="controls" role="group" aria-label="List controls">
+        <label for="itemInput" class="sr-only">New item text</label>
+        <input id="itemInput" type="text" placeholder="Type something…" />
+        <button id="addBtn" type="button" class="btn">Add</button>
+    </div>
+
+    <ul id="list" class="list"></ul>
+</main>
+
+<script>
+    const input = document.getElementById('itemInput');
+    const addBtn = document.getElementById('addBtn');
+    const list = document.getElementById('list');
+
+    function addItem(text) {
+        const value = String(text).trim();
+        if (!value) return;
+
+        const li = document.createElement('li');
+        li.className = 'list-item';
+        li.textContent = value;
+
+        const removeBtn = document.createElement('button');
+        removeBtn.textContent = '×';
+        removeBtn.type = 'button';
+        removeBtn.className = 'remove';
+        removeBtn.addEventListener('click', () => li.remove());
+
+        li.appendChild(removeBtn);
+        list.appendChild(li);
+        input.value = '';
+        input.focus();
+    }
+
+    addBtn.addEventListener('click', () => addItem(input.value));
+    input.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') addItem(input.value);
+    });
+
+    const starters = ['Variables', 'Loops', 'DOM'];
+    for (let i = 0; i < starters.length; i++) addItem(starters[i]);
+</script>
+</body>
+</html>
