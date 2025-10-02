@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/atoms.css">
+    <link rel="stylesheet" href="../css/molecules.css">
+</head>
+<body>
+<div class="container">
+    <h1>Register</h1>
+
+    <form>
+        <div class="formGroup">
+            <label class="formLabel" for="name">Name</label>
+            <input
+                    type="text"
+                    id="name"
+                    class="formInput"
+                    placeholder="Enter your name"
+                    required
+            >
+        </div>
+        <div class="formGroup">
+            <label class="formLabel" for="email">Email</label>
+            <input
+                    type="email"
+                    id="email"
+                    class="formInput"
+                    placeholder="Enter your email"
+                    required
+            >
+        </div>
+        <div class="formGroup">
+            <label class="formLabel" for="password">Password</label>
+            <input
+                    type="password"
+                    id="password"
+                    class="formInput"
+                    placeholder="Enter your password"
+                    required
+            >
+        </div>
+
+        <button type="submit" class="btn btnPrimary">
+            Create Account
+        </button>
+    </form>
+
+    <div class="link">
+        Already have an account? <a href="login.html">Login</a>
+    </div>
+</div>
+</body>
+</html>
