@@ -1,0 +1,27 @@
+.text {
+    margin: 0;
+    padding: 0;
+}
+
+.text-title {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.text-description {
+    color: #666;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.text-small {
+    font-size: 0.9rem;
+    color: #999;
+}
+
+.text-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
