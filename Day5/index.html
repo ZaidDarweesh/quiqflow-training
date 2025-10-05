@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Cards Mini Project</title>
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="./assets/css/atoms.css" />
+    <link rel="stylesheet" href="./assets/css/molecules.css" />
+    <link rel="stylesheet" href="./assets/css/app.css" />
+</head>
+<body>
+<header class="container header">
+    <h1 class="h1">Cards</h1>
+    <p class="muted">mini project using atoms & molecules</p>
+</header>
+<section class="container card-surface" aria-label="Product Filters">
+    <form id="filterForm" class="form form--grid" role="search">
+        <div class="form__field">
+            <label for="q" class="label">Search</label>
+            <input id="q" name="q" type="search" class="input" placeholder="Search products…" />
+        </div>
+
+        <div class="form__field">
+            <label for="category" class="label">Category</label>
+            <select id="category" name="category" class="select">
+                <option value="all">All</option>
+            </select>
+        </div>
+
+        <div class="form__field">
+            <label for="sort" class="label">Sort by</label>
+            <select id="sort" name="sort" class="select">
+                <option value="relevance">Relevance</option>
+                <option value="price-asc">Price: Low → High</option>
+                <option value="price-desc">Price: High → Low</option>
+                <option value="rating-desc">Rating: High → Low</option>
+            </select>
+        </div>
+
+        <div class="form__actions">
+            <button type="submit" class="btn btn--primary">Apply</button>
+            <button type="reset" class="btn btn--ghost" id="resetBtn">Reset</button>
+        </div>
+    </form>
+</section>
+
+<main class="container">
+    <div id="grid" class="grid" aria-live="polite"></div>
+</main>
+
+<footer class="container footer">
+    <small class="muted">Built with semantic HTML, modern CSS, and vanilla JS.</small>
+</footer>
+
+<script src="./assets/js/data.js"></script>
+<script src="./assets/js/app.js"></script>
+</body>
+</html>
